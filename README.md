@@ -39,3 +39,17 @@ Contenu et liens : https://www.banquemondiale.org/ext/fr/home, consulté le 14 n
 Textures : Solar System Scope, CC BY 4.0, données sources NASA. Nuit et nuages téléchargés depuis Wikimedia Commons ; jour depuis le miroir `Shriisoot/Planets-texture` sur GitHub. Redimensionnement en 4096×2048 (jour/nuit), 2048×1024 (nuages), conversion WebP. Attribution et liens disponibles sur `/credits/`.
 
 Les animations de la maquette `banque-mondiale-cinema.html` ont été portées en composants React ; le site ne dépend pas de l’environnement de la conversation.
+
+## Publication Cloudflare
+
+Démo publique : https://banque-mondiale-cinema.vincentmeliga.workers.dev/
+
+```sh
+npm ci
+npm ci --prefix cloudflare
+npm run build:cloudflare
+npm run deploy:cloudflare
+```
+
+Le déploiement utilise `cf` et la configuration `cloudflare/cloudflare.config.ts`.
+L’export Next.js est servi par Workers Static Assets. L’authentification Cloudflare reste locale ; aucun secret n’est stocké dans le dépôt.

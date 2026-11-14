@@ -5,3 +5,4 @@ out/
 .sites-runtime/
 .env*
 artifacts/
+.cloudflare/
