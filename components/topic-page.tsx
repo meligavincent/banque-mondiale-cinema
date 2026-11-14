@@ -22,7 +22,7 @@ export function TopicPage({chapter,index}:{chapter:Chapter;index:number}){
   return <main id="main" className="topic-page" ref={root}>
     <div className="topic-planet"><EarthScene motion={motion} onReady={ready}/></div>
     <div className="topic-content">
-      <Link className="back-link inline-flex items-center gap-3 topic-reveal" href={'/#'+chapter.id}><ArrowLeft size={16}/>Retour au voyage</Link>
+      <Link className="back-link inline-flex items-center gap-3 topic-reveal" href={'/#'+chapter.id} scroll={false}><ArrowLeft size={16}/>Retour au voyage</Link>
       <p className="eyebrow topic-reveal">{chapter.eyebrow}</p>
       <h1 className="topic-title topic-reveal">{chapter.name}</h1>
       <p className="topic-intro topic-reveal">{chapter.intro}</p>
